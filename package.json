@@ -1,0 +1,18 @@
+{
+  "name": "autocomplete",
+  "scripts": {
+      "tsc": "tsc --project . --outdir target-tsc",
+      "browserify": "browserify target-tsc/main.js --outfile target/main.js",
+      "html": "cp src/index.html target",
+      "build": "npm run tsc && npm run browserify && npm run html"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "typescript": "^2.1.0-dev.20160821"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.32",
+    "@types/node": "^6.0.36",
+    "lodash": "^4.15.0"
+  }
+}
